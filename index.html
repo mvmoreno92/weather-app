@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&family=Roboto+Flex:opsz,wght@8..144,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/afc711f4a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="card">
+      <h1 id="main-title">Weather Forecast</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          class="form-control"
+          id="search-bar"
+          placeholder="Change city..."
+          autocomplete="off"
+        />
+        <input type="submit" id="search-button" value="Search" />
+        <button id="current-position-button">📍</button>
+      </form>
+
+      <div class="row main-city">
+        <div class="col-5 weather-image">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+
+        <div class="col-4 main-text">
+          <h1 id="searched-city-title"></h1>
+          <h2 class="searched-city-temperature">
+            <span id="temperature-value"></span>
+            <span id="celsius">°C</span> |<span id="farenheit">°F</span>
+          </h2>
+          <ul class="searched-city-conditions">
+            <li id="searched-city-description">Sunny</li>
+            <li>Humidity: <span id="searched-city-humidity"></span> %</li>
+            <li>Wind direction: <span id="searched-city-wind"></span> km/h</li>
+          </ul>
+        </div>
+
+        <div class="col-3 main-date">
+          <h3 id="todays-date">
+            Today, <br />
+            Sunday 22/05
+          </h3>
+        </div>
+      </div>
+
+      <div class="row week">
+        <div class="col-2 week-day">
+          Monday
+          <br />
+          <i class="fa-solid fa-sun icon-week"></i>
+          <br />
+          21°C
+        </div>
+        <div class="col-2 week-day">
+          Tuesday<br />
+          <i class="fa-solid fa-cloud-bolt icon-week"></i>
+          <br />
+          28°C
+        </div>
+        <div class="col-2 week-day">
+          Wedneday <br />
+          <i class="fa-solid fa-sun icon-week"></i>
+          <br />
+          17°C
+        </div>
+        <div class="col-2 week-day">
+          Thursday<br />
+          <i class="fa-solid fa-cloud-sun icon-week"></i>
+          <br />
+          20°C
+        </div>
+        <div class="col-2 week-day">
+          Friday<br />
+          <i class="fa-solid fa-cloud-bolt icon-week"></i>
+          <br />
+          18°C
+        </div>
+      </div>
+      <footer>
+        <a href="https://github.com/mvmoreno92/weather-app" target="_blank">
+          Open source code</a
+        >
+        by Victoria Moreno
+      </footer>
+    </div>
+  </body>
+  <script src="src/script.js"></script>
+</html>
