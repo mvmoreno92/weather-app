@@ -89,12 +89,12 @@
   padding: 2px;
 }
 
-#farhenheit {
+#farenheit {
   opacity: 50%;
 }
 
-celsius:hover,
-farenheit:hover {
+#celsius:hover,
+#farenheit:hover {
   color: #cf8d61;
   cursor: pointer;
 }

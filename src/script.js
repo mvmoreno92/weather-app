@@ -101,5 +101,29 @@ function navigate(event) {
 
 let clickCurrentButton = document.querySelector("#current-position-button");
 clickCurrentButton.addEventListener("click", navigate);
+//Change temperature unit
+//to  farenheit
+function change2Farenheit(event) {
+  event.preventDefault();
+  let displayFarenheit = document.querySelector("#temperature-value");
+  displayFarenheit.innerHTML = 13;
+  event.target.style.opacity = 100;
+  document.getElementById("celsius").style.opacity = "50%";
+}
+
+let selectFarenheit = document.querySelector("#farenheit");
+selectFarenheit.addEventListener("click", change2Farenheit);
+
+//to celsius
+function change2Celsius(event) {
+  event.preventDefault();
+  let displayCelsius = document.querySelector("#temperature-value");
+  displayCelsius.innerHTML = 25;
+  event.target.style.opacity = 100;
+  document.getElementById("farenheit").style.opacity = "50%";
+}
+
+let selectCelsius = document.querySelector("#celsius");
+selectCelsius.addEventListener("click", change2Celsius);
 
 search("Paris");
