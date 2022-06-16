@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast</title>
+    <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&family=Roboto+Flex:opsz,wght@8..144,200&display=swap"
       rel="stylesheet"
@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <div class="card">
+    <div class="main-card">
       <h1 id="main-title">Weather Forecast</h1>
       <form id="search-form">
         <input
@@ -41,20 +41,21 @@
       </form>
 
       <div class="row main-city">
-        <div class="col-5 weather-image">
+        <div class="col-4 weather-image">
           <i class="fa-solid fa-sun"></i>
         </div>
 
-        <div class="col-4 main-text">
-          <h1 id="searched-city-title"></h1>
+        <div class="col-5 main-text">
+          <h1 id="searched-city-title">Paris</h1>
           <h2 class="searched-city-temperature">
-            <span id="temperature-value"></span>
-            <span id="celsius">°C</span> |<span id="farenheit">°F</span>
+            <span id="temperature-value">23</span>
+            <span id="celsius">°C</span> |
+            <span id="farhenheit">°F</span>
           </h2>
           <ul class="searched-city-conditions">
             <li id="searched-city-description">Sunny</li>
-            <li>Humidity: <span id="searched-city-humidity"></span> %</li>
-            <li>Wind direction: <span id="searched-city-wind"></span> km/h</li>
+            <li>Humidity: <span id="searched-city-humidity">6</span> %</li>
+            <li>Wind direction: <span id="searched-city-wind">3</span> km/h</li>
           </ul>
         </div>
 

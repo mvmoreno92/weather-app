@@ -1,0 +1,140 @@
+.main-card {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #ffe4b3e7;
+  border-radius: 10px;
+}
+#main-title {
+  text-align: center;
+  font-family: "Overpass Mono", monospace;
+  font-size: 50px;
+  padding: 10px;
+  text-shadow: 2px 2px 3px #cf8d61;
+}
+#search-bar {
+  margin: 5px 5px 10px 60px;
+  height: 30px;
+  max-width: 75%;
+  font-size: 18px;
+  display: inline;
+}
+
+#search-button {
+  height: 35px;
+  width: 50px;
+  background-color: #cf8d61;
+  color: blanchedalmond;
+  border-radius: 10px;
+  border: 2px solid #cf8d61;
+  font-size: 12px;
+  transition: all 150ms ease-in-out;
+  position: relative;
+}
+
+#search-button:hover {
+  background-color: blanchedalmond;
+  color: #cf8d61;
+}
+
+#current-position-button {
+  height: 35px;
+  width: 30px;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  border: 2px solid #e5e823;
+  font-size: 13px;
+  transition: all 150ms ease-in-out;
+}
+
+#current-position-button:hover {
+  background-color: #e5e823;
+}
+
+.main-city {
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+  max-width: 700px;
+  position: relative;
+  right: -60px;
+  border-radius: 6px;
+  background-color: rgba(252, 243, 243, 0.4);
+  border: none;
+}
+
+.weather-image {
+  background: #cf8d61;
+  background: radial-gradient(
+    circle farthest-side at top left,
+    #cf8d61 0%,
+    #cfcf34 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  position: relative;
+  top: 25px;
+}
+
+.main-text {
+  padding: 0px 40px;
+}
+#searched-city-title {
+  font-size: 40px;
+}
+
+.searched-city-temperature {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+#farhenheit {
+  opacity: 50%;
+}
+
+celsius:hover,
+farenheit:hover {
+  color: #cf8d61;
+  cursor: pointer;
+}
+
+li {
+  font-size: 20px;
+  list-style: none;
+}
+
+#todays-date {
+  text-align: right;
+  font-size: 20px;
+  margin-right: 15px;
+}
+.week {
+  padding: 10px;
+  position: relative;
+  right: -65px;
+}
+
+.week-day {
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 40%;
+  border: 2px solid #cf8d61;
+  background-color: rgba(252, 243, 243, 0.4);
+}
+
+.icon-week {
+  font-size: 35px;
+  padding: 10px;
+  color: #cf8d61;
+  text-shadow: 2px 2px 3px #ffe4b3e7;
+}
+
+footer {
+  text-align: center;
+  font-family: "Overpass Mono", monospace;
+  font-size: 17px;
+  padding: 10px;
+  text-shadow: 2px 2px 3px #ffe4b3e7;
+}
