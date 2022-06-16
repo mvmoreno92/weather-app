@@ -83,3 +83,23 @@ function handleSubmit(event) {
 
 let selectCity = document.querySelector("#search-form");
 selectCity.addEventListener("submit", handleSubmit);
+
+//current location
+function getPosition(position) {
+  document.querySelector("#search-bar").value = null;
+  let apiKey = "903b37cf5e8eae98d7b3d767f19c3d2a";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayCurrent);
+}
+
+function navigate(event) {
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+
+let clickCurrentButton = document.querySelector("#current-position-button");
+clickCurrentButton.addEventListener("click", navigate);
+
+search("Paris");
