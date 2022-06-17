@@ -54,9 +54,9 @@ dateDisplay.innerHTML = `Today, <br /> ${todaysDay} ${todaysMonth} ${todaysDate}
 //Display searched City conditions
 
 function displayCurrent(response) {
-  document.querySelector("#temperature-value").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemp = Math.round(response.data.main.temp);
+
+  document.querySelector("#temperature-value").innerHTML = celsiusTemp;
   document.querySelector("#searched-city-humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -117,7 +117,7 @@ clickCurrentButton.addEventListener("click", navigate);
 function change2Farenheit(event) {
   event.preventDefault();
   let displayFarenheit = document.querySelector("#temperature-value");
-  displayFarenheit.innerHTML = 13;
+  displayFarenheit.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
   event.target.style.opacity = 100;
   document.getElementById("celsius").style.opacity = "50%";
 }
@@ -129,12 +129,14 @@ selectFarenheit.addEventListener("click", change2Farenheit);
 function change2Celsius(event) {
   event.preventDefault();
   let displayCelsius = document.querySelector("#temperature-value");
-  displayCelsius.innerHTML = 25;
+  displayCelsius.innerHTML = celsiusTemp;
   event.target.style.opacity = 100;
   document.getElementById("farenheit").style.opacity = "50%";
 }
 
 let selectCelsius = document.querySelector("#celsius");
 selectCelsius.addEventListener("click", change2Celsius);
+
+let celsiusTemp = null;
 
 search("Paris");
