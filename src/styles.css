@@ -61,18 +61,10 @@
   border: none;
 }
 
-.weather-image {
-  background: #cf8d61;
-  background: radial-gradient(
-    circle farthest-side at top left,
-    #cf8d61 0%,
-    #cfcf34 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 100px;
+#searched-city-icon {
   position: relative;
-  top: 25px;
+  height: 150px;
+  top: 20px;
 }
 
 .main-text {
