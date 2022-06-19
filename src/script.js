@@ -142,28 +142,43 @@ selectCelsius.addEventListener("click", change2Celsius);
 let celsiusTemp = null;
 
 //week forecast
+function formatDay(timeStamp) {
+  let date = new Date(timeStamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = date.getDay();
+  return days[day];
+}
+
 function displayWeekForecast(response) {
-  console.log(response.data);
+  let forecast = response.data.daily;
   let weekForecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `      
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `      
           <div class="col-2 week-forecast">
-            <div id="week-day">${day}</div>
+            <div id="week-day">${formatDay(forecastDay.dt)}</div>
             <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
               id="icon-day-forecast"
               width="50px"
             />
             <div id="week-temp">
-              <span id="week-temp-max">21°</span>
-              <span id="week-temp-min">15°</span>
+              <span id="week-temp-max">${Math.round(
+                forecastDay.temp.max
+              )}°</span>
+              <span id="week-temp-min">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
             </div>
           </div>
        `;
+    }
   });
 
   forecastHTML = forecastHTML + ` </div>`;
