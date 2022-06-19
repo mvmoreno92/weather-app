@@ -54,6 +54,7 @@ dateDisplay.innerHTML = `Today, <br /> ${todaysDay} ${todaysMonth} ${todaysDate}
 //Display searched City conditions
 
 function displayCurrent(response) {
+  console.log(response.data);
   celsiusTemp = Math.round(response.data.main.temp);
 
   document.querySelector("#temperature-value").innerHTML = celsiusTemp;
@@ -64,7 +65,7 @@ function displayCurrent(response) {
     response.data.wind.speed
   );
   document.querySelector("#searched-city-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 
   document.querySelector("#searched-city-title").innerHTML = response.data.name;
 

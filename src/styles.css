@@ -1,9 +1,16 @@
 .main-card {
-  max-width: 800px;
+  width: 800px;
   margin: 20px auto;
   background-color: #ffe4b3e7;
   border-radius: 10px;
 }
+
+.main-city {
+  margin-top: 20px;
+  padding: 15px;
+  box-shadow: 2px 2px 3px #cf8d61;
+}
+
 #main-title {
   text-align: center;
   font-family: "Overpass Mono", monospace;
@@ -63,21 +70,19 @@
 
 #searched-city-icon {
   position: relative;
-  height: 150px;
-  top: 20px;
-  left: 20px;
+  height: 180px;
 }
-
+.main-text {
+  padding-left: 80px;
+}
 #searched-city-title {
   font-size: 40px;
   font-weight: bolder;
-  padding-left: 36px;
 }
 
 .searched-city-temperature {
   font-size: 35px;
   font-weight: bold;
-  padding-left: 36px;
 }
 
 #farenheit {
@@ -101,6 +106,15 @@ li {
   padding: 0;
   font-size: 20px;
 }
+#searched-city-description {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+#searched-city-humidity,
+#searched-city-wind {
+  font-weight: bolder;
+}
 
 #todays-date {
   text-align: right;
@@ -114,11 +128,13 @@ li {
   font-size: 20px;
   padding: 20px 32px;
   border-radius: 40%;
-  border: 2px solid #cf8d61;
+  border: 1px solid #cf8d61;
   background-color: rgba(252, 243, 243, 0.4);
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   position: relative;
   left: 70px;
+  box-shadow: 2px 2px 3px #cf8d61;
 }
 
 #week-temp {
@@ -130,7 +146,7 @@ li {
 footer {
   text-align: center;
   font-family: "Overpass Mono", monospace;
-  font-size: 17px;
-  padding: 10px;
+  font-size: 12px;
+  padding: 20px;
   text-shadow: 2px 2px 3px #ffe4b3e7;
 }
