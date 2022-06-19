@@ -78,6 +78,8 @@ function displayCurrent(response) {
   document
     .querySelector("#searched-city-icon")
     .setAttribute("alt", response.data.weather[0].main);
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -140,7 +142,8 @@ selectCelsius.addEventListener("click", change2Celsius);
 let celsiusTemp = null;
 
 //week forecast
-function displayWeekForecast() {
+function displayWeekForecast(response) {
+  console.log(response.data);
   let weekForecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
@@ -166,5 +169,12 @@ function displayWeekForecast() {
   forecastHTML = forecastHTML + ` </div>`;
   weekForecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast(coordinates) {
+  let apiKey = "903b37cf5e8eae98d7b3d767f19c3d2a";
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeekForecast);
+}
 search("Paris");
-displayWeekForecast();
