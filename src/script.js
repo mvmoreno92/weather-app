@@ -139,4 +139,32 @@ selectCelsius.addEventListener("click", change2Celsius);
 
 let celsiusTemp = null;
 
+//week forecast
+function displayWeekForecast() {
+  let weekForecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `      
+          <div class="col-2 week-forecast">
+            <div id="week-day">${day}</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              id="icon-day-forecast"
+              width="50px"
+            />
+            <div id="week-temp">
+              <span id="week-temp-max">21°</span>
+              <span id="week-temp-min">15°</span>
+            </div>
+          </div>
+       `;
+  });
+
+  forecastHTML = forecastHTML + ` </div>`;
+  weekForecastElement.innerHTML = forecastHTML;
+}
 search("Paris");
+displayWeekForecast();

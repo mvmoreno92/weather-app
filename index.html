@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="src/styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +23,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
@@ -64,39 +65,7 @@
         </div>
       </div>
 
-      <div class="row week">
-        <div class="col-2 week-day">
-          Monday
-          <br />
-          <i class="fa-solid fa-sun icon-week"></i>
-          <br />
-          21°C
-        </div>
-        <div class="col-2 week-day">
-          Tuesday<br />
-          <i class="fa-solid fa-cloud-bolt icon-week"></i>
-          <br />
-          28°C
-        </div>
-        <div class="col-2 week-day">
-          Wedneday <br />
-          <i class="fa-solid fa-sun icon-week"></i>
-          <br />
-          17°C
-        </div>
-        <div class="col-2 week-day">
-          Thursday<br />
-          <i class="fa-solid fa-cloud-sun icon-week"></i>
-          <br />
-          20°C
-        </div>
-        <div class="col-2 week-day">
-          Friday<br />
-          <i class="fa-solid fa-cloud-bolt icon-week"></i>
-          <br />
-          18°C
-        </div>
-      </div>
+      <div id="forecast"></div>
       <footer>
         <a href="https://github.com/mvmoreno92/weather-app" target="_blank">
           Open source code</a
