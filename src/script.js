@@ -54,7 +54,8 @@ dateDisplay.innerHTML = `Today, <br /> ${todaysDay} ${todaysMonth} ${todaysDate}
 //Display searched City conditions
 
 function displayCurrent(response) {
-  console.log(response.data);
+  document.getElementById("farenheit").style.opacity = "50%";
+  document.getElementById("celsius").style.opacity = "100%";
   celsiusTemp = Math.round(response.data.main.temp);
 
   document.querySelector("#temperature-value").innerHTML = celsiusTemp;
@@ -115,6 +116,7 @@ function navigate(event) {
 
 let clickCurrentButton = document.querySelector("#current-position-button");
 clickCurrentButton.addEventListener("click", navigate);
+
 //Change temperature unit
 //to  farenheit
 function change2Farenheit(event) {
